@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/img_data"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:elevation="5dp"
+            android:scaleType="fitXY"
+            android:src="@android:color/darker_gray"
+            app:riv_corner_radius="0dp" />
+
+        <TextView
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_below="@+id/img_data"
+            android:id="@+id/tv_data_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="Data Name" />
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/tv_data_title"
+            android:id="@+id/tv_data_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            tools:text="Description" />
+
+
+        <ImageView
+            android:elevation="10dp"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_hd"
+            android:layout_above="@+id/tv_data_title"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"/>
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/card_item"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="-1dp"
+        app:layout_constraintBottom_toTopOf="@id/card_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/layout_data"
+       />
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/helper"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/card_item"
+        app:layout_constraintStart_toStartOf="@id/card_item"
+       />
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/card_shadow"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/shadow"
+        android:elevation="-2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/card_item"
+        app:layout_constraintTop_toBottomOf="@id/helper"
+        app:layout_constraintVertical_bias="1" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <org.osmdroid.views.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_inner"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your current location"
+                android:fontFamily="@font/roboto_bold"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_marginTop="4dp"
+                android:id="@+id/latt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitude :"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="13sp"/>
+            <TextView
+                android:layout_marginTop="4dp"
+                android:id="@+id/longg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Longitude :"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:visibility="gone"
+        android:id="@+id/indc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="INDICATOR" />
+
+
+</RelativeLayout>
